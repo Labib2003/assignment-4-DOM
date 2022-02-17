@@ -11,6 +11,7 @@ function getValue(id) {
         alert('Please make sure all of the input flelds have positive number values or 0.');
     }
 }
+
 //calculating expenses and balance
 document.getElementById('calc-btn').addEventListener('click', function () {
     const income = getValue('income');
@@ -32,16 +33,23 @@ document.getElementById('calc-btn').addEventListener('click', function () {
 });
 //calculating savings
 document.getElementById('save-btn').addEventListener('click', function () {
-    const income = getValue('income');
     const savePercent = getValue('saving-persentage');
+    const balance = parseFloat(document.getElementById('balance').innerText);
+    const income = getValue('income');
+    // validating input
     if (savePercent <= 100) {
         const saveAmount = (savePercent / 100) * income;
-        const remainingBalance = income - saveAmount;
-        document.getElementById('saving-amount').innerText = saveAmount;
-        document.getElementById('remaining-balance').innerText = remainingBalance;
-        console.log(remainingBalance);
+        const remainingBalance = balance - saveAmount;
+        // validating amount
+        if (remainingBalance > 0) {
+            document.getElementById('saving-amount').innerText = saveAmount;
+            document.getElementById('remaining-balance').innerText = remainingBalance;
+        }
+        else{
+            alert('Saving amount is bigger than balance.');
+        }
     }
-    else{
+    else {
         alert('You cannot save more than 100%');
     }
 });
