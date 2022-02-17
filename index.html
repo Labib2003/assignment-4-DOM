@@ -35,31 +35,31 @@
             <!-- calculator -->
             <div class="col-6 d-flex flex-column justify-content-around px-5">
                 <!-- income section -->
-                <h3 class="fw-bold mx-auto">Income</h3>
+                <h3  class="fw-bold mx-auto">Income</h3>
                 <div class="d-flex justify-content-between px-5 mx-5 my-1">
                     <h4>Income:&nbsp;</h4>
-                    <input type="text">
+                    <input id="income" type="text">
                 </div>
                 <!-- expenses section -->
                 <h3 class="fw-bold mx-auto">Expenses</h3>
                 <div class="d-flex justify-content-between px-5 mx-5 my-1">
                     <h4>Food:&nbsp;</h4>
-                    <input id="foodExpense" class="input" type="text" value="00">
+                    <input id="foodExpense" type="text">
                 </div>
                 <div class="d-flex justify-content-between px-5 mx-5 my-1">
                     <h4>Rent:&nbsp;</h4>
-                    <input id="rentExpense" class="input" type="text" value=00>
+                    <input id="rentExpense" type="text">
                 </div>
                 <div class="d-flex justify-content-between px-5 mx-5 my-1">
                     <h4>Clothes:&nbsp;</h4>
-                    <input id="clotheExpense" class="input" type="text" value="00">
+                    <input id="clotheExpense" type="text">
                 </div>
                 <!-- calculate button -->
                 <button id="calc-btn" class="btn btn-primary mx-5 my-3">Calculate</button>
                 <!-- output of the calculation -->
                 <div class="text-center">
                     <h3>Total Expence: $<span id="total-expense"></span></h3>
-                    <h3>Remaining Balance: $<span></span></h3>
+                    <h3>Remaining Balance: $<span id="remaining-balance"></span></h3>
                 </div>
             </div>
         </section>
